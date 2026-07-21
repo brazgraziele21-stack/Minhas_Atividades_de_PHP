@@ -1,0 +1,20 @@
+<form action="processa20.php" method="post">
+    <select name="cor">
+        <option value="vermelho">Vermelho</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+    </select>
+    <button type="submit">Enviar</button>
+</form>
+
+
+
+<?php
+$cor = $_POST["cor"];
+?>
+<!DOCTYPE html>
+<html>
+<body style="background-color: <?php echo $cor; ?>;">
+    <h1>Cor escolhida: <?php echo $cor; ?></h1>
+</body>
+</html>
