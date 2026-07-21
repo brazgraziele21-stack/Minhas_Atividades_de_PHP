@@ -16,7 +16,7 @@ echo "<hr>";
 $data = date("d/m/Y");
 echo "Hoje e: ", $data, "<br>";
 
-// Exercicio 5
+// Exercicio 5 
 $hora = date("H:i:s");
 echo "Agora sao: ", $hora;
 echo "<hr>";
