@@ -1,0 +1,16 @@
+<form action="processa19.php" method="post">
+    Nome: <input type="text" name="nome">
+    <button type="submit">Enviar</button>
+</form>
+
+
+
+<?php
+$nome = $_POST["nome"];
+
+if ($nome == "") {
+    echo "Preencha o nome";
+} else {
+    echo $nome;
+}
+?>
