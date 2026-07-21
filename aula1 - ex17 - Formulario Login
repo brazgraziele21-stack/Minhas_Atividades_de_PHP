@@ -1,0 +1,13 @@
+<form action="processa17.php" method="post">
+    Usuario: <input type="text" name="usuario"><br>
+    Senha: <input type="password" name="senha"><br>
+    <button type="submit">Entrar</button>
+</form>
+
+
+
+<?php
+$usuario = $_POST["usuario"];
+$senha = $_POST["senha"];
+echo "Login recebido";
+?>
