@@ -3,7 +3,7 @@
     <button type="submit">Enviar</button>
 </form>
 
-
+ 
 
 <?php
 $nome = $_POST["nome"];
