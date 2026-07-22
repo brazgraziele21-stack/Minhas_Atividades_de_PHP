@@ -1,0 +1,31 @@
+<?php
+class Filme {
+    public $titulo;
+    public $genero;
+    public $ano;
+    public $diretor;
+}
+
+$filme1 = new Filme();
+$filme1->titulo = "Ponte para Terabitia";
+$filme1->genero = "Fantasia";
+$filme1->ano = 2007;
+$filme1->diretor = "Gabor Csupo";
+
+$filme2 = new Filme();
+$filme2->titulo = "Interestelar";
+$filme2->genero = "Ficcao cientifica";
+$filme2->ano = 2014;
+$filme2->diretor = "Christopher Nolan";
+
+echo "Titulo: ", $filme1->titulo, "<br>";
+echo "Genero: ", $filme1->genero, "<br>";
+echo "Ano: ", $filme1->ano, "<br>";
+echo "Diretor: ", $filme1->diretor;
+echo "<hr>";
+
+echo "Titulo: ", $filme2->titulo, "<br>";
+echo "Genero: ", $filme2->genero, "<br>";
+echo "Ano: ", $filme2->ano, "<br>";
+echo "Diretor: ", $filme2->diretor;
+?>
