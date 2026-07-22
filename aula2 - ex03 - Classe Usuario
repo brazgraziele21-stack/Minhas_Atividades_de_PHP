@@ -1,0 +1,19 @@
+<?php
+class Usuario {
+    public $nome;
+    public $email;
+    public $cidade;
+
+    public function __construct($nome, $email, $cidade) {
+        $this->nome = $nome;
+        $this->email = $email;
+        $this->cidade = $cidade;
+    }
+}
+
+$usuario1 = new Usuario("Grazi Braz", "brazgrazi@email.com", "Guarapuava");
+
+echo "Nome: ", $usuario1->nome, "<br>";
+echo "Email: ", $usuario1->email, "<br>";
+echo "Cidade: ", $usuario1->cidade;
+?>
