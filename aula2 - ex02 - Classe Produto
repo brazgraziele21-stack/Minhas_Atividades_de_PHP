@@ -1,0 +1,18 @@
+<?php
+class Produto {
+    public $nome;
+    public $preco;
+    public $categoria;
+
+    public function exibirResumo() {
+        echo "O produto ", $this->nome, " pertence a categoria ", $this->categoria, " e custa R$ ", $this->preco;
+    }
+}
+
+$produto1 = new Produto();
+$produto1->nome = "Notebook";
+$produto1->preco = 3500;
+$produto1->categoria = "Informatica";
+
+$produto1->exibirResumo();
+?>
