@@ -1,0 +1,28 @@
+<?php
+class Livro {
+    public $titulo;
+    public $autor;
+    public $ano;
+    public $descricao;
+
+    public function __construct($titulo, $autor, $ano, $descricao) {
+        $this->titulo = $titulo;
+        $this->autor = $autor;
+        $this->ano = $ano;
+        $this->descricao = $descricao;
+    }
+
+    public function gerarCard() {
+        echo "<div>";
+        echo "<h3>", $this->titulo, "</h3>";
+        echo "<p>Autor: ", $this->autor, "</p>";
+        echo "<p>Ano: ", $this->ano, "</p>";
+        echo "<p>", $this->descricao, "</p>";
+        echo "</div>";
+    }
+}
+
+$livro1 = new Livro("O Programador Autodidata", "Cory Althoff", 2017, "Um guia sobre como aprender programacao de forma autodidata e conseguir uma vaga na area de tecnologia");
+
+$livro1->gerarCard();
+?>
