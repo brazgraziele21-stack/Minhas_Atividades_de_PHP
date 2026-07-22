@@ -1,0 +1,42 @@
+<?php
+class Perfil {
+    public $nome;
+    public $idade;
+    public $cidade;
+    public $curso;
+    public $bio;
+
+    public function __construct($nome, $idade, $cidade, $curso, $bio) {
+        $this->nome = $nome;
+        $this->idade = $idade;
+        $this->cidade = $cidade;
+        $this->curso = $curso;
+        $this->bio = $bio;
+    }
+
+    public function apresentar() {
+        echo "Ola, meu nome e ", $this->nome, " e eu tenho ", $this->idade, " anos.";
+    }
+
+    public function gerarCard() {
+        echo "<div>";
+        echo "<h3>", $this->nome, "</h3>";
+        echo "<p>Idade: ", $this->idade, "</p>";
+        echo "<p>Cidade: ", $this->cidade, "</p>";
+        echo "<p>Curso: ", $this->curso, "</p>";
+        echo "<p>", $this->bio, "</p>";
+        echo "</div>";
+    }
+}
+
+$perfil1 = new Perfil("Grazi", 19, "Guarapuava", "TSI", "Estudante de programacao apaixonada por backend");
+$perfil2 = new Perfil("Ana", 22, "Curitiba", "Design", "Trabalha com identidade visual");
+$perfil3 = new Perfil("Bruno", 25, "Ponta Grossa", "Engenharia", "Gosta de robotica");
+
+$perfis = array($perfil1, $perfil2, $perfil3);
+
+foreach ($perfis as $perfil) {
+    $perfil->gerarCard();
+    echo "<hr>";
+}
+?>
