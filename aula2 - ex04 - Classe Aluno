@@ -1,0 +1,35 @@
+<?php
+class Aluno {
+    public $nome;
+    public $nota1;
+    public $nota2;
+    public $media;
+
+    public function __construct($nome, $nota1, $nota2) {
+        $this->nome = $nome;
+        $this->nota1 = $nota1;
+        $this->nota2 = $nota2;
+    }
+
+    public function calcularMedia() {
+        $this->media = ($this->nota1 + $this->nota2) / 2;
+        echo "Media: ", $this->media, "<br>";
+    }
+
+    public function verificarSituacao() {
+        if ($this->media >= 7) {
+            echo "Situacao: Aprovado";
+        } else if ($this->media >= 5) {
+            echo "Situacao: Recuperacao";
+        } else {
+            echo "Situacao: Reprovado";
+        }
+    }
+}
+
+$aluno1 = new Aluno("Grazi", 8, 7);
+
+echo "Nome: ", $aluno1->nome, "<br>";
+$aluno1->calcularMedia();
+$aluno1->verificarSituacao();
+?>
