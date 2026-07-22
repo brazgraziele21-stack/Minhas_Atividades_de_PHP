@@ -1,0 +1,26 @@
+<?php
+class Curso {
+    public $nome;
+    public $cargaHoraria;
+    public $area;
+
+    public function __construct($nome, $cargaHoraria, $area) {
+        $this->nome = $nome;
+        $this->cargaHoraria = $cargaHoraria;
+        $this->area = $area;
+    }
+}
+
+$curso1 = new Curso("Programacao Basica", 120, "Tecnologia");
+$curso2 = new Curso("Banco de Dados", 80, "Tecnologia");
+$curso3 = new Curso("Design Grafico", 60, "Design");
+
+$cursos = array($curso1, $curso2, $curso3);
+
+foreach ($cursos as $curso) {
+    echo "Nome: ", $curso->nome, "<br>";
+    echo "Carga horaria: ", $curso->cargaHoraria, "<br>";
+    echo "Area: ", $curso->area;
+    echo "<hr>";
+}
+?>
